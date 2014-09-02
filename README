@@ -1,0 +1,23 @@
+﻿Content Installer
+Copyright (C) 2014 Silky Softworks
+
+What is Content Installer?
+==========================
+A program that allows you to install and uninstall zipped Poser/DAZ Studio content.
+
+How does it work?
+=================
+You select your content and runtime folders and install (or uninstall) content.
+The Generate content file button generates an xml list that Content Installer will use
+to remember where everything went.
+
+Silky Softworks Software License
+================================
+
+You are hereby granted the right to:
+* Modify the code to suit your needs
+* Distribute the resulting binary
+
+You may not:
+* Charge any money for distributing the program and source
+* Modify the AboutDialog.cs or form
