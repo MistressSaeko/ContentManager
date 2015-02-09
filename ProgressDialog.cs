@@ -6,11 +6,11 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ContentInstaller
+namespace ContentManager
 {
-    public partial class Progress : Form
+    public partial class ProgressDialog : Form
     {
-        public Progress()
+        public ProgressDialog()
         {
             InitializeComponent();
         }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace ContentInstaller
+namespace ContentManager
 {
     static class Program
     {
@@ -14,7 +14,7 @@ namespace ContentInstaller
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new Form1());
         }
     }
 }

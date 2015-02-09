@@ -6,13 +6,17 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ContentInstaller
+namespace ContentManager
 {
     public partial class AboutDialog : Form
     {
         public AboutDialog()
         {
             InitializeComponent();
+
+            AppNameBox.Text = Application.ProductName;
+            AppVersionBox.Text = Application.ProductVersion;
+            AppVendorBox.Text = Application.CompanyName;
         }
     }
 }

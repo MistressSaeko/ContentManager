@@ -8,121 +8,60 @@ using System.Windows.Forms;
 using System.IO;
 using System.IO.Compression;
 
-
-
-namespace ContentInstaller
+namespace ContentManager
 {
-    public partial class MainForm : Form
+    public partial class Form1 : Form
     {
-        public MainForm()
+        public Form1()
         {
             InitializeComponent();
-            poptview();
         }
 
-        private void PathsButton_Click(object sender, EventArgs e)
+        private void ExitToolButton_Click(object sender, EventArgs e)
         {
-            Paths paths = new Paths();
-            DialogResult res = paths.ShowDialog();
-            if (res == DialogResult.OK)
-            {
-                ContentList.Nodes.Add(paths.Content);
-            }
+            this.Close();
         }
 
-        private void InstallButton_Click(object sender, EventArgs e)
+        private void AboutToolButton_Click(object sender, EventArgs e)
         {
-            Progress inst = new Progress();
-            inst.Text = "Installing content...";
-            // The label would be the contents of the archive
-            // Then we set the checkbox control in the ContentView to checked signifying that the content has been installed.
+            AboutDialog sexy = new AboutDialog();
+            sexy.ShowDialog(this);
         }
 
-        private void UninstallButton_Click(object sender, EventArgs e)
+        private void PathsToolButton_Click(object sender, EventArgs e)
         {
-            Progress uninst = new Progress();
-            uninst.Text = "Uninstalling content...";
-            // The label would be the contents of what's being removed. Ideally, you'd want the app to "remember" where everything went.
-        }
-
-
-
-        private void poptview()
-        {
-            TreeNode rootnode;
-
-            DirectoryInfo content = new DirectoryInfo();
-            if (content.Exists)
-            {
-                rootnode = new TreeNode(content.Name);
-                rootnode.Tag = content;
-                GetDirectories(content.GetDirectories(), rootnode);
-                ContentList.Nodes.Add(rootnode);
-            }
-        }
-
-        private void GetDirectories(DirectoryInfo[] subdirs, TreeNode addnode)
-        {
-            TreeNode anode;
-            DirectoryInfo[] subsubdirs;
-            foreach (DirectoryInfo subdir in subdirs)
-            {
-                anode = new TreeNode(subdir.Name, 0, 0);
-                anode.Tag = subdir;
-                subsubdirs = subdir.GetDirectories();
-                if (subsubdirs.Length != 0)
-                {
-                    GetDirectories(subsubdirs, anode);
-                }
-                addnode.Nodes.Add(anode);
-            }
-        }
-
-        void ContentList_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
-        {
-            TreeNode newselected = e.Node;
+            PathsDialog paths = new PathsDialog();
+            ListViewItem Item = null;
+            ListViewItem.ListViewSubItem[] PoserContent;
             ContentView.Items.Clear();
-            DirectoryInfo nodedirinfo = (DirectoryInfo)newselected.Tag;
-            ListViewItem.ListViewSubItem[] subitems;
-            ListViewItem item = null;
+            DirectoryInfo DirInfo = new DirectoryInfo(@"\Silky Softworks\Content Manager\Content");
 
-            foreach(DirectoryInfo dir in nodedirinfo.GetDirectories())
+            DialogResult DlgResult = paths.ShowDialog(this);
+            if (DlgResult == DialogResult.OK)
             {
-                item = new ListViewItem(dir.Name);
-                subitems = new ListViewItem.ListViewSubItem[]
+                foreach (FileInfo file in DirInfo.GetFiles())
                 {
-                    new ListViewItem.ListViewSubItem(item, "Directory"),
-                    new ListViewItem.ListViewSubItem(item, dir.LastAccessTime.ToShortDateString())
-                };
-
-                item.SubItems.AddRange(subitems);
-                ContentView.Items.Add(item);
+                    Item = new ListViewItem(file.Name);
+                    PoserContent = new ListViewItem.ListViewSubItem[] { new ListViewItem.ListViewSubItem(Item, "Content"), new ListViewItem.ListViewSubItem(Item, file.LastAccessTime.ToShortDateString()) };
+                    Item.SubItems.AddRange(PoserContent);
+                    ContentView.Items.Add(paths.Content);
+                }
             }
-
-            foreach (FileInfo file in nodedirinfo.GetFiles())
+            else
             {
-                item = new ListViewItem(file.Name);
-                subitems = new ListViewItem.ListViewSubItem[]
-            { new ListViewItem.ListViewSubItem(item, "File"), 
-             new ListViewItem.ListViewSubItem(item, 
-                file.LastAccessTime.ToShortDateString())};
-
-                item.SubItems.AddRange(subitems);
-                ContentView.Items.Add(item);
+                paths.Close();
             }
-
-            ContentView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
 
-        private void ScanButton_Click(object sender, EventArgs e)
+        private void InstallToolButton_Click(object sender, EventArgs e)
         {
-//            Directory.GetFiles();
+            ProgressDialog Install = new ProgressDialog();
+            Install.Text = "Installing Content";
         }
 
-        private void AboutButton_Click(object sender, EventArgs e)
+        private void ScanToolButton_Click(object sender, EventArgs e)
         {
-            AboutDialog aboot = new AboutDialog();
-            aboot.ShowDialog(this);
+
         }
     }
 }

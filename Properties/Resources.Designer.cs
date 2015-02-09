@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ContentInstaller.Properties {
+namespace ContentManager.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace ContentInstaller.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ContentInstaller.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ContentManager.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -60,6 +60,20 @@ namespace ContentInstaller.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap arrow_down {
+            get {
+                object obj = ResourceManager.GetObject("arrow_down", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap arrow_up {
+            get {
+                object obj = ResourceManager.GetObject("arrow_up", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap button {
             get {
                 object obj = ResourceManager.GetObject("button", resourceCulture);
@@ -67,44 +81,9 @@ namespace ContentInstaller.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap file_extension_bmp {
+        internal static System.Drawing.Bitmap female {
             get {
-                object obj = ResourceManager.GetObject("file_extension_bmp", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap file_extension_jpeg {
-            get {
-                object obj = ResourceManager.GetObject("file_extension_jpeg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap file_extension_jpg {
-            get {
-                object obj = ResourceManager.GetObject("file_extension_jpg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap file_extension_png {
-            get {
-                object obj = ResourceManager.GetObject("file_extension_png", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap file_extension_tif {
-            get {
-                object obj = ResourceManager.GetObject("file_extension_tif", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap file_extension_zip {
-            get {
-                object obj = ResourceManager.GetObject("file_extension_zip", resourceCulture);
+                object obj = ResourceManager.GetObject("female", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -112,6 +91,20 @@ namespace ContentInstaller.Properties {
         internal static System.Drawing.Bitmap folder {
             get {
                 object obj = ResourceManager.GetObject("folder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap folder_explore {
+            get {
+                object obj = ResourceManager.GetObject("folder_explore", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap help {
+            get {
+                object obj = ResourceManager.GetObject("help", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -130,9 +123,23 @@ namespace ContentInstaller.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap Silky {
+            get {
+                object obj = ResourceManager.GetObject("Silky", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap splash {
             get {
                 object obj = ResourceManager.GetObject("splash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap xhtml {
+            get {
+                object obj = ResourceManager.GetObject("xhtml", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

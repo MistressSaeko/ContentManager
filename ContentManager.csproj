@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{5208D269-2219-47A4-A101-F814D59E553A}</ProjectGuid>
+    <ProjectGuid>{A28B1BFC-5B11-4A9D-B509-4973526871D6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ContentInstaller</RootNamespace>
-    <AssemblyName>ContentInstaller</AssemblyName>
+    <RootNamespace>ContentManager</RootNamespace>
+    <AssemblyName>ContentManager</AssemblyName>
     <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ApplicationIcon>images\princess.ico</ApplicationIcon>
@@ -40,43 +40,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="AboutDialog.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AboutDialog.Designer.cs">
       <DependentUpon>AboutDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Paths.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Paths.Designer.cs">
-      <DependentUpon>Paths.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PathsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PathsDialog.Designer.cs">
+      <DependentUpon>PathsDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="Progress.cs">
+    <Compile Include="ProgressDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Progress.Designer.cs">
-      <DependentUpon>Progress.cs</DependentUpon>
+    <Compile Include="ProgressDialog.Designer.cs">
+      <DependentUpon>ProgressDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AboutDialog.resx">
       <DependentUpon>AboutDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Paths.resx">
-      <DependentUpon>Paths.cs</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Progress.resx">
-      <DependentUpon>Progress.cs</DependentUpon>
+    <EmbeddedResource Include="PathsDialog.resx">
+      <DependentUpon>PathsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressDialog.resx">
+      <DependentUpon>ProgressDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -99,37 +99,40 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <SplashScreen Include="images\splash.png" />
+    <None Include="images\arrow_down.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="images\file_extension_zip.png" />
+    <None Include="images\arrow_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\female.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="images\folder.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="images\file_extension_bmp.png" />
+    <None Include="images\folder_explore.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="images\file_extension_jpeg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\file_extension_jpg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\file_extension_png.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\file_extension_tif.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\princess.ico" />
+    <None Include="images\help.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="images\selfie.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="images\button.png" />
+    <None Include="images\Silky.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <SplashScreen Include="images\splash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\xhtml.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\princess.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

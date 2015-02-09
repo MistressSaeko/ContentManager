@@ -1,14 +1,14 @@
-﻿Content Installer
+﻿Content Manager
 Copyright (C) 2014 Silky Softworks
 
-What is Content Installer?
+What is Content Manager?
 ==========================
 A program that allows you to install and uninstall zipped Poser/DAZ Studio content.
 
 How does it work?
 =================
 You select your content and runtime folders and install (or uninstall) content.
-The Generate content file button generates an xml list that Content Installer will use
+The Generate content file button generates an xml list that Content Manager will use
 to remember where everything went.
 
 Silky Softworks Software License
